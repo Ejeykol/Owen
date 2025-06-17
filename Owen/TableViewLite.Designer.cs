@@ -30,10 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableViewLite));
             this.panelControls = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnAddNew = new System.Windows.Forms.Button();
-            this.comboBoxTables = new System.Windows.Forms.ComboBox();
+            this.comboBoxRelatedTables = new System.Windows.Forms.ComboBox();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.splitContainerView = new System.Windows.Forms.SplitContainer();
             this.dataGridViewRelated = new System.Windows.Forms.DataGridView();
@@ -43,8 +40,12 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblTable = new System.Windows.Forms.Label();
-            this.comboBoxRelatedTables = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddNew = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.comboBoxTables = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabelTable = new System.Windows.Forms.ToolStripLabel();
             this.panelControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerView)).BeginInit();
@@ -57,12 +58,7 @@
             // 
             // panelControls
             // 
-            this.panelControls.Controls.Add(this.comboBoxRelatedTables);
-            this.panelControls.Controls.Add(this.lblTable);
-            this.panelControls.Controls.Add(this.btnDelete);
-            this.panelControls.Controls.Add(this.btnSave);
-            this.panelControls.Controls.Add(this.btnAddNew);
-            this.panelControls.Controls.Add(this.comboBoxTables);
+            this.panelControls.Controls.Add(this.panel1);
             this.panelControls.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControls.Location = new System.Drawing.Point(0, 621);
             this.panelControls.Name = "panelControls";
@@ -70,48 +66,16 @@
             this.panelControls.TabIndex = 0;
             this.panelControls.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControls_Paint);
             // 
-            // btnDelete
+            // comboBoxRelatedTables
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDelete.Location = new System.Drawing.Point(387, 6);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(108, 48);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Удалить";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSave.Location = new System.Drawing.Point(273, 6);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(108, 48);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Сохранить";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnAddNew
-            // 
-            this.btnAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddNew.Location = new System.Drawing.Point(159, 6);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(108, 48);
-            this.btnAddNew.TabIndex = 1;
-            this.btnAddNew.Text = "Добавить";
-            this.btnAddNew.UseVisualStyleBackColor = true;
-            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
-            // 
-            // comboBoxTables
-            // 
-            this.comboBoxTables.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxTables.FormattingEnabled = true;
-            this.comboBoxTables.Location = new System.Drawing.Point(7, 23);
-            this.comboBoxTables.Name = "comboBoxTables";
-            this.comboBoxTables.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxTables.TabIndex = 0;
-            this.comboBoxTables.SelectedIndexChanged += new System.EventHandler(this.comboBoxTables_SelectedIndexChanged);
+            this.comboBoxRelatedTables.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBoxRelatedTables.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxRelatedTables.FormattingEnabled = true;
+            this.comboBoxRelatedTables.Location = new System.Drawing.Point(0, 566);
+            this.comboBoxRelatedTables.Name = "comboBoxRelatedTables";
+            this.comboBoxRelatedTables.Size = new System.Drawing.Size(212, 28);
+            this.comboBoxRelatedTables.TabIndex = 5;
+            this.comboBoxRelatedTables.SelectedIndexChanged += new System.EventHandler(this.comboBoxRelatedTables_SelectedIndexChanged);
             // 
             // dataGridViewMain
             // 
@@ -122,7 +86,7 @@
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.Size = new System.Drawing.Size(1048, 594);
             this.dataGridViewMain.TabIndex = 1;
-            this.dataGridViewMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMain_CellContentClick);
+            this.dataGridViewMain.Click += new System.EventHandler(this.dataGridViewMain_Click);
             // 
             // splitContainerView
             // 
@@ -136,6 +100,7 @@
             // 
             // splitContainerView.Panel2
             // 
+            this.splitContainerView.Panel2.Controls.Add(this.comboBoxRelatedTables);
             this.splitContainerView.Panel2.Controls.Add(this.dataGridViewRelated);
             this.splitContainerView.Size = new System.Drawing.Size(1264, 594);
             this.splitContainerView.SplitterDistance = 1048;
@@ -158,7 +123,12 @@
             this.toolStripControls.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripControls.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBackButton,
-            this.toolStripDropDownButton});
+            this.toolStripDropDownButton,
+            this.btnAddNew,
+            this.btnSave,
+            this.btnDelete,
+            this.comboBoxTables,
+            this.toolStripLabelTable});
             this.toolStripControls.Location = new System.Drawing.Point(0, 0);
             this.toolStripControls.Name = "toolStripControls";
             this.toolStripControls.Size = new System.Drawing.Size(1264, 27);
@@ -212,26 +182,56 @@
             this.toolStripMenuItem3.Text = "Скрыть нижнюю панель";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.скрытьХодыToolStripMenuItem_Click);
             // 
-            // lblTable
+            // panel1
             // 
-            this.lblTable.AutoSize = true;
-            this.lblTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTable.Location = new System.Drawing.Point(3, 3);
-            this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(132, 20);
-            this.lblTable.TabIndex = 4;
-            this.lblTable.Text = "Выбор таблицы:";
-            this.lblTable.Click += new System.EventHandler(this.lblTable_Click);
+            this.panel1.Location = new System.Drawing.Point(12, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 51);
+            this.panel1.TabIndex = 5;
             // 
-            // comboBoxRelatedTables
+            // btnAddNew
             // 
-            this.comboBoxRelatedTables.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxRelatedTables.FormattingEnabled = true;
-            this.comboBoxRelatedTables.Location = new System.Drawing.Point(714, 17);
-            this.comboBoxRelatedTables.Name = "comboBoxRelatedTables";
-            this.comboBoxRelatedTables.Size = new System.Drawing.Size(334, 28);
-            this.comboBoxRelatedTables.TabIndex = 5;
-            this.comboBoxRelatedTables.SelectedIndexChanged += new System.EventHandler(this.comboBoxRelatedTables_SelectedIndexChanged);
+            this.btnAddNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.Image")));
+            this.btnAddNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(88, 24);
+            this.btnAddNew.Text = "Добавить";
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 24);
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(80, 24);
+            this.btnDelete.Text = "Удалить";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // comboBoxTables
+            // 
+            this.comboBoxTables.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.comboBoxTables.Name = "comboBoxTables";
+            this.comboBoxTables.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxTables.SelectedIndexChanged += new System.EventHandler(this.comboBoxTables_SelectedIndexChanged);
+            // 
+            // toolStripLabelTable
+            // 
+            this.toolStripLabelTable.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabelTable.Name = "toolStripLabelTable";
+            this.toolStripLabelTable.Size = new System.Drawing.Size(155, 24);
+            this.toolStripLabelTable.Text = "Выберите таблицу:";
             // 
             // TableViewLite
             // 
@@ -246,7 +246,6 @@
             this.Text = "Просмотр таблиц";
             this.Load += new System.EventHandler(this.TableViewLite_Load);
             this.panelControls.ResumeLayout(false);
-            this.panelControls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
             this.splitContainerView.Panel1.ResumeLayout(false);
             this.splitContainerView.Panel2.ResumeLayout(false);
@@ -263,10 +262,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelControls;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnAddNew;
-        private System.Windows.Forms.ComboBox comboBoxTables;
         private System.Windows.Forms.DataGridView dataGridViewMain;
         private System.Windows.Forms.SplitContainer splitContainerView;
         private System.Windows.Forms.DataGridView dataGridViewRelated;
@@ -276,7 +271,12 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.ComboBox comboBoxRelatedTables;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripButton btnAddNew;
+        private System.Windows.Forms.ToolStripButton btnSave;
+        private System.Windows.Forms.ToolStripButton btnDelete;
+        private System.Windows.Forms.ToolStripComboBox comboBoxTables;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelTable;
     }
 }

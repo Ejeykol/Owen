@@ -7,11 +7,14 @@ namespace Owen
 {
     public partial class Authorization : Form
     {
-        string ConnectionString = ConfigurationManager.ConnectionStrings["LiteConnectionString"].ConnectionString; 
+        string ConnectionString = ConfigurationManager.ConnectionStrings["LiteConnectionString"].ConnectionString;
+        private bool passwordVisible = false; // Флаг для отслеживания видимости пароля
 
         public Authorization()
         {
             InitializeComponent();
+            // Устанавливаем пароль по умолчанию как скрытый
+            Password.PasswordChar = '*';
         }
 
         private void Authorization_Load(object sender, EventArgs e)
@@ -72,6 +75,20 @@ namespace Owen
             Start frm = new Start();
             frm.Show();
             this.Hide();
+        }
+
+        private void PasswordShowHide_Click(object sender, EventArgs e)
+        {
+            passwordVisible = !passwordVisible;
+            if (passwordVisible)
+            {
+                Password.PasswordChar = '\0'; // Пустой символ делает текст видимым
+            }
+            else
+            {
+                Password.PasswordChar = '*';
+            }
+            Password.SelectionStart = Password.TextLength;
         }
     }
 }

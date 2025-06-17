@@ -72,7 +72,7 @@
             // 
             this.LabelText.AutoSize = true;
             this.LabelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelText.Location = new System.Drawing.Point(31, 47);
+            this.LabelText.Location = new System.Drawing.Point(29, 57);
             this.LabelText.Name = "LabelText";
             this.LabelText.Size = new System.Drawing.Size(67, 24);
             this.LabelText.TabIndex = 6;
@@ -82,7 +82,7 @@
             // 
             this.LabelColumn.AutoSize = true;
             this.LabelColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelColumn.Location = new System.Drawing.Point(6, 12);
+            this.LabelColumn.Location = new System.Drawing.Point(4, 22);
             this.LabelColumn.Name = "LabelColumn";
             this.LabelColumn.Size = new System.Drawing.Size(92, 24);
             this.LabelColumn.TabIndex = 5;
@@ -91,7 +91,7 @@
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnReset.Location = new System.Drawing.Point(253, 46);
+            this.btnReset.Location = new System.Drawing.Point(244, 55);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(108, 33);
             this.btnReset.TabIndex = 4;
@@ -102,7 +102,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSearch.Location = new System.Drawing.Point(253, 9);
+            this.btnSearch.Location = new System.Drawing.Point(244, 18);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(108, 32);
             this.btnSearch.TabIndex = 3;
@@ -113,7 +113,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSearch.Location = new System.Drawing.Point(104, 47);
+            this.textBoxSearch.Location = new System.Drawing.Point(102, 57);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(121, 29);
             this.textBoxSearch.TabIndex = 2;
@@ -125,18 +125,18 @@
             this.comboBoxColumns.FormattingEnabled = true;
             this.comboBoxColumns.Items.AddRange(new object[] {
             "Нажимите для выбора таблицы"});
-            this.comboBoxColumns.Location = new System.Drawing.Point(104, 9);
+            this.comboBoxColumns.Location = new System.Drawing.Point(102, 19);
             this.comboBoxColumns.Name = "comboBoxColumns";
             this.comboBoxColumns.Size = new System.Drawing.Size(121, 32);
             this.comboBoxColumns.TabIndex = 1;
             // 
             // SanSelect
             // 
-            this.SanSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SanSelect.Dock = System.Windows.Forms.DockStyle.Right;
             this.SanSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.SanSelect.Location = new System.Drawing.Point(666, 6);
+            this.SanSelect.Location = new System.Drawing.Point(669, 16);
             this.SanSelect.Name = "SanSelect";
-            this.SanSelect.Size = new System.Drawing.Size(128, 80);
+            this.SanSelect.Size = new System.Drawing.Size(128, 67);
             this.SanSelect.TabIndex = 0;
             this.SanSelect.Text = "Загрузить SAN";
             this.SanSelect.UseVisualStyleBackColor = true;

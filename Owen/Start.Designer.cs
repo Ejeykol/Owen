@@ -32,16 +32,14 @@
             this.MainLabel = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Button();
             this.Auth = new System.Windows.Forms.Button();
-            this.Test = new System.Windows.Forms.Button();
             this.IconPicture = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IconPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // MainLabel
             // 
-            this.MainLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.MainLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MainLabel.AutoSize = true;
             this.MainLabel.Font = new System.Drawing.Font("Bahnschrift Condensed", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -76,17 +74,6 @@
             this.Auth.UseVisualStyleBackColor = true;
             this.Auth.Click += new System.EventHandler(this.Enter_Click);
             // 
-            // Test
-            // 
-            this.Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.Test.Location = new System.Drawing.Point(260, 454);
-            this.Test.Name = "Test";
-            this.Test.Size = new System.Drawing.Size(127, 40);
-            this.Test.TabIndex = 3;
-            this.Test.Text = "👁";
-            this.Test.UseVisualStyleBackColor = true;
-            this.Test.Click += new System.EventHandler(this.button1_Click);
-            // 
             // IconPicture
             // 
             this.IconPicture.Image = ((System.Drawing.Image)(resources.GetObject("IconPicture.Image")));
@@ -98,25 +85,12 @@
             this.IconPicture.TabIndex = 4;
             this.IconPicture.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.button1.Location = new System.Drawing.Point(515, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "👁";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.IconPicture);
-            this.Controls.Add(this.Test);
             this.Controls.Add(this.Auth);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.MainLabel);
@@ -135,9 +109,7 @@
         private System.Windows.Forms.Label MainLabel;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Auth;
-        private System.Windows.Forms.Button Test;
         private System.Windows.Forms.PictureBox IconPicture;
-        private System.Windows.Forms.Button button1;
     }
 }
 

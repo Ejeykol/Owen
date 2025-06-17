@@ -138,7 +138,7 @@ namespace Owen
                 {
                     if (line.StartsWith("["))
                     {
-                        Match m = Regex.Match(line, @"$(\w+)\s+""([^""]*)""$");
+                        Match m = Regex.Match(line, @"\[(\w+)\s+""([^""]*)""\]");
 
                         if (m.Success)
                         {

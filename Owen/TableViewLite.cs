@@ -51,7 +51,7 @@ namespace Owen
             {
                 MessageBox.Show($"Ошибка при инициализации данных: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+            }
 
         private void LoadForeignKeysForTable(SQLiteConnection connection, string tableName)
         {
@@ -196,11 +196,7 @@ namespace Owen
 
         private void dataGridViewMain_SelectionChanged(object sender, EventArgs e)
         {
-            ForeignKeyInfo selectedFk = comboBoxRelatedTables.SelectedItem as ForeignKeyInfo;
-            if (selectedFk != null && dataGridViewMain.CurrentRow != null)
-                LoadRelatedTable(selectedFk);
-            else
-                dataGridViewRelated.DataSource = null;
+
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
@@ -395,12 +391,20 @@ namespace Owen
 
         // Неиспользуемые/пустые обработчики событий
         private void TableViewLite_Load(object sender, EventArgs e) { }
-        private void dataGridViewMain_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
         private void panelControls_Paint(object sender, PaintEventArgs e) { }
         private void splitContainerView_SplitterMoved(object sender, SplitterEventArgs e) { }
         private void dataGridViewRelated_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
         private void toolStripControls_ItemClicked(object sender, ToolStripItemClickedEventArgs e) { }
         private void toolStripDropDownButton_Click(object sender, EventArgs e) { }
         private void lblTable_Click(object sender, EventArgs e) { }
+
+        private void dataGridViewMain_Click(object sender, EventArgs e)
+        {
+            ForeignKeyInfo selectedFk = comboBoxRelatedTables.SelectedItem as ForeignKeyInfo;
+            if (selectedFk != null)
+                LoadRelatedTable(selectedFk);
+            else
+                dataGridViewRelated.DataSource = null;
+        }
     }
 }

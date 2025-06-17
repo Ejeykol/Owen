@@ -37,6 +37,7 @@
             this.Auth = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.ToolStripButtonBack = new System.Windows.Forms.ToolStripButton();
+            this.PasswordShowHide = new System.Windows.Forms.Button();
             this.AuthGroupBox.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // 
             this.AuthGroupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AuthGroupBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.AuthGroupBox.Controls.Add(this.PasswordShowHide);
             this.AuthGroupBox.Controls.Add(this.PasswordLabel);
             this.AuthGroupBox.Controls.Add(this.LoginLabel);
             this.AuthGroupBox.Controls.Add(this.Password);
@@ -134,6 +136,17 @@
             this.ToolStripButtonBack.Text = "Назад";
             this.ToolStripButtonBack.Click += new System.EventHandler(this.ToolStripButtonBack_Click);
             // 
+            // PasswordShowHide
+            // 
+            this.PasswordShowHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PasswordShowHide.Location = new System.Drawing.Point(277, 103);
+            this.PasswordShowHide.Name = "PasswordShowHide";
+            this.PasswordShowHide.Size = new System.Drawing.Size(32, 26);
+            this.PasswordShowHide.TabIndex = 6;
+            this.PasswordShowHide.Text = "👁";
+            this.PasswordShowHide.UseVisualStyleBackColor = true;
+            this.PasswordShowHide.Click += new System.EventHandler(this.PasswordShowHide_Click);
+            // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,5 +178,6 @@
         private System.Windows.Forms.Button Auth;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton ToolStripButtonBack;
+        private System.Windows.Forms.Button PasswordShowHide;
     }
 }
