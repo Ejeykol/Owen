@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Converter));
             this.dgvMoves = new System.Windows.Forms.DataGridView();
             this.MoveNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,16 +38,9 @@
             this.Black = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
-            this.MovesGroupBox = new System.Windows.Forms.GroupBox();
             this.MoveBtnsPanel = new System.Windows.Forms.Panel();
             this.BtnMoveFirst = new System.Windows.Forms.Button();
             this.BtnMoveLast = new System.Windows.Forms.Button();
-            this.toolStripControls = new System.Windows.Forms.ToolStrip();
-            this.toolStripBackButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ChessSplitter = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -65,6 +58,9 @@
             this.SiteLbl = new System.Windows.Forms.Label();
             this.txtGame = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.RefreshDatabaseTables = new System.Windows.Forms.Button();
+            this.ImportButton = new System.Windows.Forms.Button();
             this.ImportPanel = new System.Windows.Forms.Panel();
             this.ImportLbl = new System.Windows.Forms.Label();
             this.comboBoxTables = new System.Windows.Forms.ComboBox();
@@ -90,15 +86,14 @@
             this.Report = new System.Windows.Forms.Button();
             this.BoardControlsGroupBox = new System.Windows.Forms.GroupBox();
             this.chessboard = new ChessboardControl.Chessboard();
+            this.BoardControlPanel = new System.Windows.Forms.Panel();
             this.ToolStripButtonBack = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.скрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.скрытьДоскуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.скрытьХодыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMoves)).BeginInit();
-            this.MovesGroupBox.SuspendLayout();
             this.MoveBtnsPanel.SuspendLayout();
-            this.toolStripControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChessSplitter)).BeginInit();
             this.ChessSplitter.Panel1.SuspendLayout();
             this.ChessSplitter.Panel2.SuspendLayout();
@@ -108,6 +103,7 @@
             this.MainInfoPanel.SuspendLayout();
             this.InfoLabelsPanel.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.ImportPanel.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.PreviewPanel.SuspendLayout();
@@ -117,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NudFromMove)).BeginInit();
             this.ReportsBtnsPanel.SuspendLayout();
             this.BoardControlsGroupBox.SuspendLayout();
+            this.BoardControlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvMoves
@@ -126,42 +123,42 @@
             this.dgvMoves.AllowUserToResizeColumns = false;
             this.dgvMoves.AllowUserToResizeRows = false;
             this.dgvMoves.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMoves.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMoves.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMoves.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMoves.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MoveNum,
             this.White,
             this.Black});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMoves.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMoves.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMoves.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMoves.Location = new System.Drawing.Point(3, 16);
+            this.dgvMoves.Location = new System.Drawing.Point(0, 0);
             this.dgvMoves.Name = "dgvMoves";
             this.dgvMoves.ReadOnly = true;
             this.dgvMoves.RowHeadersVisible = false;
             this.dgvMoves.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvMoves.Size = new System.Drawing.Size(234, 596);
+            this.dgvMoves.Size = new System.Drawing.Size(240, 681);
             this.dgvMoves.TabIndex = 3;
             this.dgvMoves.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMoves_CellClick);
             // 
             // MoveNum
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MoveNum.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MoveNum.DefaultCellStyle = dataGridViewCellStyle2;
             this.MoveNum.FillWeight = 38.07107F;
             this.MoveNum.HeaderText = "";
             this.MoveNum.Name = "MoveNum";
@@ -197,24 +194,13 @@
             // 
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnNext.Location = new System.Drawing.Point(126, 0);
+            this.btnNext.Location = new System.Drawing.Point(132, 0);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(53, 37);
             this.btnNext.TabIndex = 7;
             this.btnNext.Text = "→";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // MovesGroupBox
-            // 
-            this.MovesGroupBox.Controls.Add(this.dgvMoves);
-            this.MovesGroupBox.Controls.Add(this.MoveBtnsPanel);
-            this.MovesGroupBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MovesGroupBox.Location = new System.Drawing.Point(1024, 27);
-            this.MovesGroupBox.Name = "MovesGroupBox";
-            this.MovesGroupBox.Size = new System.Drawing.Size(240, 654);
-            this.MovesGroupBox.TabIndex = 24;
-            this.MovesGroupBox.TabStop = false;
             // 
             // MoveBtnsPanel
             // 
@@ -224,9 +210,9 @@
             this.MoveBtnsPanel.Controls.Add(this.BtnMoveFirst);
             this.MoveBtnsPanel.Controls.Add(this.BtnMoveLast);
             this.MoveBtnsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.MoveBtnsPanel.Location = new System.Drawing.Point(3, 612);
+            this.MoveBtnsPanel.Location = new System.Drawing.Point(0, 642);
             this.MoveBtnsPanel.Name = "MoveBtnsPanel";
-            this.MoveBtnsPanel.Size = new System.Drawing.Size(234, 39);
+            this.MoveBtnsPanel.Size = new System.Drawing.Size(240, 39);
             this.MoveBtnsPanel.TabIndex = 24;
             // 
             // BtnMoveFirst
@@ -245,7 +231,7 @@
             // 
             this.BtnMoveLast.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnMoveLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnMoveLast.Location = new System.Drawing.Point(179, 0);
+            this.BtnMoveLast.Location = new System.Drawing.Point(185, 0);
             this.BtnMoveLast.Name = "BtnMoveLast";
             this.BtnMoveLast.Size = new System.Drawing.Size(53, 37);
             this.BtnMoveLast.TabIndex = 25;
@@ -253,68 +239,10 @@
             this.BtnMoveLast.UseVisualStyleBackColor = true;
             this.BtnMoveLast.Click += new System.EventHandler(this.BtnMoveLast_Click);
             // 
-            // toolStripControls
-            // 
-            this.toolStripControls.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripControls.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripBackButton,
-            this.toolStripDropDownButton2});
-            this.toolStripControls.Location = new System.Drawing.Point(0, 0);
-            this.toolStripControls.Name = "toolStripControls";
-            this.toolStripControls.Size = new System.Drawing.Size(1264, 27);
-            this.toolStripControls.TabIndex = 27;
-            this.toolStripControls.Text = "Панель элементов";
-            // 
-            // toolStripBackButton
-            // 
-            this.toolStripBackButton.Image = global::Owen.Properties.Resources.pngtree_back_arrow_backward_direction_previous_png_image_5198415;
-            this.toolStripBackButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBackButton.Name = "toolStripBackButton";
-            this.toolStripBackButton.Size = new System.Drawing.Size(78, 24);
-            this.toolStripBackButton.Text = "Назад";
-            this.toolStripBackButton.ToolTipText = "Назад";
-            this.toolStripBackButton.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
-            this.toolStripDropDownButton2.Image = global::Owen.Properties.Resources.png_transparent_gear_icon_outline;
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 24);
-            this.toolStripDropDownButton2.Text = "Настройки формы";
-            this.toolStripDropDownButton2.ToolTipText = "toolStripHideButton";
-            this.toolStripDropDownButton2.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(216, 24);
-            this.toolStripMenuItem1.Text = "Скрыть элементы";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.GameInfoHideShow_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(216, 24);
-            this.toolStripMenuItem2.Text = "Скрыть доску";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.скрытьДоскуToolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(216, 24);
-            this.toolStripMenuItem3.Text = "Скрыть ходы";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.скрытьХодыToolStripMenuItem_Click);
-            // 
             // ChessSplitter
             // 
             this.ChessSplitter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChessSplitter.Location = new System.Drawing.Point(0, 27);
+            this.ChessSplitter.Location = new System.Drawing.Point(0, 0);
             this.ChessSplitter.Name = "ChessSplitter";
             // 
             // ChessSplitter.Panel1
@@ -324,8 +252,8 @@
             // ChessSplitter.Panel2
             // 
             this.ChessSplitter.Panel2.Controls.Add(this.BoardControlsGroupBox);
-            this.ChessSplitter.Size = new System.Drawing.Size(1024, 654);
-            this.ChessSplitter.SplitterDistance = 264;
+            this.ChessSplitter.Size = new System.Drawing.Size(1264, 681);
+            this.ChessSplitter.SplitterDistance = 325;
             this.ChessSplitter.TabIndex = 22;
             // 
             // tabControl1
@@ -338,7 +266,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(264, 654);
+            this.tabControl1.Size = new System.Drawing.Size(325, 681);
             this.tabControl1.TabIndex = 24;
             // 
             // tabPage1
@@ -349,7 +277,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(256, 621);
+            this.tabPage1.Size = new System.Drawing.Size(317, 648);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Информация";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -364,7 +292,7 @@
             this.MainInfoPanel.Controls.Add(this.BlackLbl);
             this.MainInfoPanel.Location = new System.Drawing.Point(0, 238);
             this.MainInfoPanel.Name = "MainInfoPanel";
-            this.MainInfoPanel.Size = new System.Drawing.Size(254, 79);
+            this.MainInfoPanel.Size = new System.Drawing.Size(315, 79);
             this.MainInfoPanel.TabIndex = 25;
             // 
             // ResultLbl
@@ -410,7 +338,7 @@
             this.InfoLabelsPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.InfoLabelsPanel.Location = new System.Drawing.Point(3, 3);
             this.InfoLabelsPanel.Name = "InfoLabelsPanel";
-            this.InfoLabelsPanel.Size = new System.Drawing.Size(250, 149);
+            this.InfoLabelsPanel.Size = new System.Drawing.Size(311, 149);
             this.InfoLabelsPanel.TabIndex = 24;
             // 
             // EventLbl
@@ -492,7 +420,7 @@
             // txtGame
             // 
             this.txtGame.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtGame.Location = new System.Drawing.Point(29, 614);
+            this.txtGame.Location = new System.Drawing.Point(11, 564);
             this.txtGame.Multiline = true;
             this.txtGame.Name = "txtGame";
             this.txtGame.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -502,14 +430,47 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.ImportPanel);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(256, 621);
+            this.tabPage2.Size = new System.Drawing.Size(317, 648);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Импорт";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.RefreshDatabaseTables);
+            this.panel1.Controls.Add(this.ImportButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(311, 592);
+            this.panel1.TabIndex = 38;
+            // 
+            // RefreshDatabaseTables
+            // 
+            this.RefreshDatabaseTables.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RefreshDatabaseTables.Location = new System.Drawing.Point(0, 553);
+            this.RefreshDatabaseTables.Name = "RefreshDatabaseTables";
+            this.RefreshDatabaseTables.Size = new System.Drawing.Size(311, 39);
+            this.RefreshDatabaseTables.TabIndex = 1;
+            this.RefreshDatabaseTables.Text = "Обновить";
+            this.RefreshDatabaseTables.UseVisualStyleBackColor = true;
+            this.RefreshDatabaseTables.Click += new System.EventHandler(this.RefreshDatabaseTables_Click);
+            // 
+            // ImportButton
+            // 
+            this.ImportButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ImportButton.Location = new System.Drawing.Point(0, 0);
+            this.ImportButton.Name = "ImportButton";
+            this.ImportButton.Size = new System.Drawing.Size(311, 39);
+            this.ImportButton.TabIndex = 0;
+            this.ImportButton.Text = "Открыть форму импорта";
+            this.ImportButton.UseVisualStyleBackColor = true;
+            this.ImportButton.Click += new System.EventHandler(this.ImportButton_Click);
             // 
             // ImportPanel
             // 
@@ -519,9 +480,9 @@
             this.ImportPanel.Controls.Add(this.ImportLbl);
             this.ImportPanel.Controls.Add(this.comboBoxTables);
             this.ImportPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ImportPanel.Location = new System.Drawing.Point(3, 568);
+            this.ImportPanel.Location = new System.Drawing.Point(3, 595);
             this.ImportPanel.Name = "ImportPanel";
-            this.ImportPanel.Size = new System.Drawing.Size(250, 50);
+            this.ImportPanel.Size = new System.Drawing.Size(311, 50);
             this.ImportPanel.TabIndex = 27;
             // 
             // ImportLbl
@@ -542,9 +503,10 @@
             this.comboBoxTables.FormattingEnabled = true;
             this.comboBoxTables.Location = new System.Drawing.Point(0, 20);
             this.comboBoxTables.Name = "comboBoxTables";
-            this.comboBoxTables.Size = new System.Drawing.Size(248, 28);
+            this.comboBoxTables.Size = new System.Drawing.Size(309, 28);
             this.comboBoxTables.TabIndex = 12;
             this.comboBoxTables.SelectedIndexChanged += new System.EventHandler(this.comboBoxTables_SelectedIndexChanged);
+            this.comboBoxTables.SelectionChangeCommitted += new System.EventHandler(this.comboBoxTables_SelectionChangeCommitted);
             // 
             // tabPage3
             // 
@@ -555,7 +517,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(256, 621);
+            this.tabPage3.Size = new System.Drawing.Size(317, 648);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Печать";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -569,7 +531,7 @@
             this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PreviewPanel.Location = new System.Drawing.Point(3, 3);
             this.PreviewPanel.Name = "PreviewPanel";
-            this.PreviewPanel.Size = new System.Drawing.Size(250, 363);
+            this.PreviewPanel.Size = new System.Drawing.Size(311, 390);
             this.PreviewPanel.TabIndex = 36;
             // 
             // rtbPreview
@@ -578,7 +540,7 @@
             this.rtbPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbPreview.Location = new System.Drawing.Point(0, 20);
             this.rtbPreview.Name = "rtbPreview";
-            this.rtbPreview.Size = new System.Drawing.Size(250, 297);
+            this.rtbPreview.Size = new System.Drawing.Size(311, 324);
             this.rtbPreview.TabIndex = 31;
             this.rtbPreview.Text = "";
             this.rtbPreview.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtbPreview_KeyDown);
@@ -598,7 +560,7 @@
             // 
             this.MovePreviewLabel.AutoSize = true;
             this.MovePreviewLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.MovePreviewLabel.Location = new System.Drawing.Point(0, 317);
+            this.MovePreviewLabel.Location = new System.Drawing.Point(0, 344);
             this.MovePreviewLabel.Name = "MovePreviewLabel";
             this.MovePreviewLabel.Size = new System.Drawing.Size(172, 20);
             this.MovePreviewLabel.TabIndex = 37;
@@ -607,9 +569,9 @@
             // txtMovesPreview
             // 
             this.txtMovesPreview.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtMovesPreview.Location = new System.Drawing.Point(0, 337);
+            this.txtMovesPreview.Location = new System.Drawing.Point(0, 364);
             this.txtMovesPreview.Name = "txtMovesPreview";
-            this.txtMovesPreview.Size = new System.Drawing.Size(250, 26);
+            this.txtMovesPreview.Size = new System.Drawing.Size(311, 26);
             this.txtMovesPreview.TabIndex = 36;
             // 
             // CommentsReportPanel
@@ -620,9 +582,9 @@
             this.CommentsReportPanel.Controls.Add(this.CommentLbl);
             this.CommentsReportPanel.Controls.Add(this.rtb);
             this.CommentsReportPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.CommentsReportPanel.Location = new System.Drawing.Point(3, 366);
+            this.CommentsReportPanel.Location = new System.Drawing.Point(3, 393);
             this.CommentsReportPanel.Name = "CommentsReportPanel";
-            this.CommentsReportPanel.Size = new System.Drawing.Size(250, 57);
+            this.CommentsReportPanel.Size = new System.Drawing.Size(311, 57);
             this.CommentsReportPanel.TabIndex = 33;
             // 
             // CommentLbl
@@ -640,7 +602,7 @@
             this.rtb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.rtb.Location = new System.Drawing.Point(0, 20);
             this.rtb.Name = "rtb";
-            this.rtb.Size = new System.Drawing.Size(248, 35);
+            this.rtb.Size = new System.Drawing.Size(309, 35);
             this.rtb.TabIndex = 28;
             this.rtb.Text = "";
             // 
@@ -656,9 +618,9 @@
             this.MovesReportPanel.Controls.Add(this.label2);
             this.MovesReportPanel.Controls.Add(this.label1);
             this.MovesReportPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.MovesReportPanel.Location = new System.Drawing.Point(3, 423);
+            this.MovesReportPanel.Location = new System.Drawing.Point(3, 450);
             this.MovesReportPanel.Name = "MovesReportPanel";
-            this.MovesReportPanel.Size = new System.Drawing.Size(250, 125);
+            this.MovesReportPanel.Size = new System.Drawing.Size(311, 125);
             this.MovesReportPanel.TabIndex = 32;
             // 
             // checkBoxIncludeImages
@@ -755,9 +717,9 @@
             this.ReportsBtnsPanel.Controls.Add(this.AddToReport);
             this.ReportsBtnsPanel.Controls.Add(this.Report);
             this.ReportsBtnsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ReportsBtnsPanel.Location = new System.Drawing.Point(3, 548);
+            this.ReportsBtnsPanel.Location = new System.Drawing.Point(3, 575);
             this.ReportsBtnsPanel.Name = "ReportsBtnsPanel";
-            this.ReportsBtnsPanel.Size = new System.Drawing.Size(250, 70);
+            this.ReportsBtnsPanel.Size = new System.Drawing.Size(311, 70);
             this.ReportsBtnsPanel.TabIndex = 34;
             // 
             // AddToReport
@@ -766,7 +728,7 @@
             this.AddToReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddToReport.Location = new System.Drawing.Point(0, 0);
             this.AddToReport.Name = "AddToReport";
-            this.AddToReport.Size = new System.Drawing.Size(248, 34);
+            this.AddToReport.Size = new System.Drawing.Size(309, 34);
             this.AddToReport.TabIndex = 29;
             this.AddToReport.Text = "Добавить в отчёт";
             this.AddToReport.UseVisualStyleBackColor = true;
@@ -778,7 +740,7 @@
             this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Report.Location = new System.Drawing.Point(0, 34);
             this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(248, 34);
+            this.Report.Size = new System.Drawing.Size(309, 34);
             this.Report.TabIndex = 27;
             this.Report.Text = "Сохранить отчёт";
             this.Report.UseVisualStyleBackColor = true;
@@ -790,7 +752,7 @@
             this.BoardControlsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BoardControlsGroupBox.Location = new System.Drawing.Point(0, 0);
             this.BoardControlsGroupBox.Name = "BoardControlsGroupBox";
-            this.BoardControlsGroupBox.Size = new System.Drawing.Size(756, 654);
+            this.BoardControlsGroupBox.Size = new System.Drawing.Size(935, 681);
             this.BoardControlsGroupBox.TabIndex = 21;
             this.BoardControlsGroupBox.TabStop = false;
             this.BoardControlsGroupBox.Resize += new System.EventHandler(this.BoardControlsGroupBox_Resize);
@@ -806,71 +768,59 @@
             this.chessboard.MinimumSize = new System.Drawing.Size(250, 250);
             this.chessboard.Name = "chessboard";
             this.chessboard.ShowVisualHints = true;
-            this.chessboard.Size = new System.Drawing.Size(595, 561);
+            this.chessboard.Size = new System.Drawing.Size(493, 493);
             this.chessboard.TabIndex = 10;
             this.chessboard.Text = "chessboard";
             // 
+            // BoardControlPanel
+            // 
+            this.BoardControlPanel.Controls.Add(this.MoveBtnsPanel);
+            this.BoardControlPanel.Controls.Add(this.dgvMoves);
+            this.BoardControlPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BoardControlPanel.Location = new System.Drawing.Point(1024, 0);
+            this.BoardControlPanel.Name = "BoardControlPanel";
+            this.BoardControlPanel.Size = new System.Drawing.Size(240, 681);
+            this.BoardControlPanel.TabIndex = 11;
+            // 
             // ToolStripButtonBack
             // 
-            this.ToolStripButtonBack.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButtonBack.Image")));
-            this.ToolStripButtonBack.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButtonBack.Name = "ToolStripButtonBack";
-            this.ToolStripButtonBack.Size = new System.Drawing.Size(78, 24);
-            this.ToolStripButtonBack.Text = "Назад";
-            this.ToolStripButtonBack.Click += new System.EventHandler(this.Back_Click);
+            this.ToolStripButtonBack.Size = new System.Drawing.Size(23, 23);
             // 
             // toolStripDropDownButton1
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.скрытьToolStripMenuItem,
-            this.скрытьДоскуToolStripMenuItem1,
-            this.скрытьХодыToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 24);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(23, 23);
             // 
             // скрытьToolStripMenuItem
             // 
             this.скрытьToolStripMenuItem.Name = "скрытьToolStripMenuItem";
-            this.скрытьToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.скрытьToolStripMenuItem.Text = "Скрыть панель управления";
-            this.скрытьToolStripMenuItem.Click += new System.EventHandler(this.GameInfoHideShow_Click);
+            this.скрытьToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // скрытьДоскуToolStripMenuItem1
             // 
             this.скрытьДоскуToolStripMenuItem1.Name = "скрытьДоскуToolStripMenuItem1";
-            this.скрытьДоскуToolStripMenuItem1.Size = new System.Drawing.Size(225, 22);
-            this.скрытьДоскуToolStripMenuItem1.Text = "Скрыть доску";
-            this.скрытьДоскуToolStripMenuItem1.Click += new System.EventHandler(this.скрытьДоскуToolStripMenuItem1_Click);
+            this.скрытьДоскуToolStripMenuItem1.Size = new System.Drawing.Size(32, 19);
             // 
             // скрытьХодыToolStripMenuItem
             // 
             this.скрытьХодыToolStripMenuItem.Name = "скрытьХодыToolStripMenuItem";
-            this.скрытьХодыToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.скрытьХодыToolStripMenuItem.Text = "Скрыть ходы";
-            this.скрытьХодыToolStripMenuItem.Click += new System.EventHandler(this.скрытьХодыToolStripMenuItem_Click);
+            this.скрытьХодыToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // Converter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.BoardControlPanel);
             this.Controls.Add(this.ChessSplitter);
-            this.Controls.Add(this.MovesGroupBox);
-            this.Controls.Add(this.toolStripControls);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(967, 558);
             this.Name = "Converter";
             this.Text = "Доска";
             this.Load += new System.EventHandler(this.Converter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMoves)).EndInit();
-            this.MovesGroupBox.ResumeLayout(false);
             this.MoveBtnsPanel.ResumeLayout(false);
-            this.toolStripControls.ResumeLayout(false);
-            this.toolStripControls.PerformLayout();
             this.ChessSplitter.Panel1.ResumeLayout(false);
             this.ChessSplitter.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ChessSplitter)).EndInit();
@@ -884,6 +834,7 @@
             this.InfoLabelsPanel.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ImportPanel.ResumeLayout(false);
             this.ImportPanel.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -898,8 +849,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NudFromMove)).EndInit();
             this.ReportsBtnsPanel.ResumeLayout(false);
             this.BoardControlsGroupBox.ResumeLayout(false);
+            this.BoardControlPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -907,13 +858,11 @@
         private System.Windows.Forms.DataGridView dgvMoves;
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.GroupBox MovesGroupBox;
         private System.Windows.Forms.Button BtnMoveLast;
         private System.Windows.Forms.Button BtnMoveFirst;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoveNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn White;
         private System.Windows.Forms.DataGridViewTextBoxColumn Black;
-        private System.Windows.Forms.ToolStrip toolStripControls;
         private System.Windows.Forms.SplitContainer ChessSplitter;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -962,10 +911,9 @@
         private System.Windows.Forms.Panel PreviewPanel;
         private System.Windows.Forms.Label MovePreviewLabel;
         private System.Windows.Forms.TextBox txtMovesPreview;
-        private System.Windows.Forms.ToolStripButton toolStripBackButton;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ImportButton;
+        private System.Windows.Forms.Panel BoardControlPanel;
+        private System.Windows.Forms.Button RefreshDatabaseTables;
     }
 }

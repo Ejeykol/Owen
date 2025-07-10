@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableDataForm));
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.ControlsGroupBox = new System.Windows.Forms.GroupBox();
             this.LabelText = new System.Windows.Forms.Label();
             this.LabelColumn = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
@@ -39,8 +38,9 @@
             this.comboBoxColumns = new System.Windows.Forms.ComboBox();
             this.SanSelect = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.ControlsGroupBox.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView
@@ -49,30 +49,14 @@
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(800, 364);
+            this.dataGridView.Size = new System.Drawing.Size(800, 382);
             this.dataGridView.TabIndex = 0;
-            // 
-            // ControlsGroupBox
-            // 
-            this.ControlsGroupBox.Controls.Add(this.LabelText);
-            this.ControlsGroupBox.Controls.Add(this.LabelColumn);
-            this.ControlsGroupBox.Controls.Add(this.btnReset);
-            this.ControlsGroupBox.Controls.Add(this.btnSearch);
-            this.ControlsGroupBox.Controls.Add(this.textBoxSearch);
-            this.ControlsGroupBox.Controls.Add(this.comboBoxColumns);
-            this.ControlsGroupBox.Controls.Add(this.SanSelect);
-            this.ControlsGroupBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ControlsGroupBox.Location = new System.Drawing.Point(0, 364);
-            this.ControlsGroupBox.Name = "ControlsGroupBox";
-            this.ControlsGroupBox.Size = new System.Drawing.Size(800, 86);
-            this.ControlsGroupBox.TabIndex = 1;
-            this.ControlsGroupBox.TabStop = false;
             // 
             // LabelText
             // 
             this.LabelText.AutoSize = true;
             this.LabelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelText.Location = new System.Drawing.Point(29, 57);
+            this.LabelText.Location = new System.Drawing.Point(34, 38);
             this.LabelText.Name = "LabelText";
             this.LabelText.Size = new System.Drawing.Size(67, 24);
             this.LabelText.TabIndex = 6;
@@ -82,7 +66,7 @@
             // 
             this.LabelColumn.AutoSize = true;
             this.LabelColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelColumn.Location = new System.Drawing.Point(4, 22);
+            this.LabelColumn.Location = new System.Drawing.Point(9, 3);
             this.LabelColumn.Name = "LabelColumn";
             this.LabelColumn.Size = new System.Drawing.Size(92, 24);
             this.LabelColumn.TabIndex = 5;
@@ -91,7 +75,7 @@
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnReset.Location = new System.Drawing.Point(244, 55);
+            this.btnReset.Location = new System.Drawing.Point(249, 36);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(108, 33);
             this.btnReset.TabIndex = 4;
@@ -102,7 +86,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSearch.Location = new System.Drawing.Point(244, 18);
+            this.btnSearch.Location = new System.Drawing.Point(249, -1);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(108, 32);
             this.btnSearch.TabIndex = 3;
@@ -113,7 +97,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSearch.Location = new System.Drawing.Point(102, 57);
+            this.textBoxSearch.Location = new System.Drawing.Point(107, 38);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(121, 29);
             this.textBoxSearch.TabIndex = 2;
@@ -125,7 +109,7 @@
             this.comboBoxColumns.FormattingEnabled = true;
             this.comboBoxColumns.Items.AddRange(new object[] {
             "Нажимите для выбора таблицы"});
-            this.comboBoxColumns.Location = new System.Drawing.Point(102, 19);
+            this.comboBoxColumns.Location = new System.Drawing.Point(107, 0);
             this.comboBoxColumns.Name = "comboBoxColumns";
             this.comboBoxColumns.Size = new System.Drawing.Size(121, 32);
             this.comboBoxColumns.TabIndex = 1;
@@ -134,13 +118,28 @@
             // 
             this.SanSelect.Dock = System.Windows.Forms.DockStyle.Right;
             this.SanSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.SanSelect.Location = new System.Drawing.Point(669, 16);
+            this.SanSelect.Location = new System.Drawing.Point(672, 0);
             this.SanSelect.Name = "SanSelect";
-            this.SanSelect.Size = new System.Drawing.Size(128, 67);
+            this.SanSelect.Size = new System.Drawing.Size(128, 68);
             this.SanSelect.TabIndex = 0;
             this.SanSelect.Text = "Загрузить SAN";
             this.SanSelect.UseVisualStyleBackColor = true;
             this.SanSelect.Click += new System.EventHandler(this.SanSelect_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.SanSelect);
+            this.panel1.Controls.Add(this.LabelText);
+            this.panel1.Controls.Add(this.LabelColumn);
+            this.panel1.Controls.Add(this.comboBoxColumns);
+            this.panel1.Controls.Add(this.btnReset);
+            this.panel1.Controls.Add(this.textBoxSearch);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 382);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 68);
+            this.panel1.TabIndex = 2;
             // 
             // TableDataForm
             // 
@@ -148,14 +147,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.ControlsGroupBox);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TableDataForm";
             this.Text = "Таблица из базы";
             this.Load += new System.EventHandler(this.TableDataForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.ControlsGroupBox.ResumeLayout(false);
-            this.ControlsGroupBox.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -163,7 +162,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.GroupBox ControlsGroupBox;
         private System.Windows.Forms.Button SanSelect;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSearch;
@@ -172,5 +170,6 @@
         private System.Windows.Forms.Label LabelText;
         private System.Windows.Forms.Label LabelColumn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

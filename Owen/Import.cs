@@ -311,15 +311,5 @@ namespace Owen
         {
             TxtTableName.Text = $"Games_{DateTime.Now:yyyyMMdd_HHmmss}";
         }
-
-        private void toolStripBackButton_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Вы уверены что хотите вернуться?", "Возврат на форму выбора", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Selection frm = new Selection();
-                frm.Show();
-                this.Hide();
-            }
-        }
     }
 }

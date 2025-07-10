@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration; // Для ConfigurationManager
 using System.Data;
+using System.Data.SQLite; // Изменение: System.Data.SQLite
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Data.SQLite; // Изменение: System.Data.SQLite
-using System.Configuration; // Для ConfigurationManager
 namespace Owen
 {
     public partial class Converter : Form
@@ -20,15 +22,6 @@ namespace Owen
         {
             InitializeComponent();
             LoadTables();
-        }
-        private void Back_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Вы уверены что хотите вернуться?", "Возврат на форму выбора", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Selection frm = new Selection();
-                frm.Show();
-                this.Hide();
-            }
         }
         private List<(string WhiteMove, string BlackMove)> ParseGame(string pgnText)
         {
@@ -186,10 +179,10 @@ namespace Owen
             }
             return tables;
         }
-        private int iffirst = 0; // Флаг для первого запуска (или первого выбора таблицы)
-        private void comboBoxTables_SelectedIndexChanged(object sender, EventArgs e)
+        //private int iffirst = 0; // Флаг для первого запуска (или первого выбора таблицы)
+        private void comboBoxTables_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (comboBoxTables.SelectedItem != null && iffirst > 0)
+            if (comboBoxTables.SelectedItem != null /*&& iffirst > 0*/)
             {
                 string selectedTable = comboBoxTables.SelectedItem.ToString();
                 // Изменение: Теперь TableDataForm должна работать с SQLite
@@ -272,7 +265,11 @@ namespace Owen
                 };
                 tableForm.Show();
             }
-            iffirst++;
+            //iffirst++;
+        }
+        private void comboBoxTables_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
         }
         // Вспомогательный метод для безопасного получения значения столбца
         private string GetValueOrDefault(DataRow row, string columnName)
@@ -444,12 +441,6 @@ namespace Owen
             catch { rtbPreview.Text = "Предпросмотр недоступен"; }
         }
         // ---------------- Скрыть элементы -------------------
-        private bool gameinfois = true;
-        private void GameInfoHideShow_Click(object sender, EventArgs e) { gameinfois = !gameinfois; tabControl1.Visible = gameinfois; ChessSplitter.Panel1Collapsed = !gameinfois; }
-        private bool movespanel = true;
-        private void скрытьХодыToolStripMenuItem_Click(object sender, EventArgs e) { movespanel = !movespanel; MovesGroupBox.Visible = movespanel; }
-        private bool boardpanel = true;
-        private void скрытьДоскуToolStripMenuItem1_Click(object sender, EventArgs e) { boardpanel = !boardpanel; BoardControlsGroupBox.Visible = boardpanel; }
         private void rtbPreview_KeyDown(object sender, KeyEventArgs e) { e.Handled = true; }
         private void rtbPreview_KeyPress(object sender, KeyPressEventArgs e) { e.Handled = true; }
         private void checkBoxIncludeImages_CheckedChanged(object sender, EventArgs e)
@@ -465,5 +456,16 @@ namespace Owen
         private void BlackMoveCheckBox_CheckedChanged(object sender, EventArgs e) { UpdateMovesPreview(); }
         private void WhiteMoveCheckBox_CheckedChanged(object sender, EventArgs e) { UpdateMovesPreview(); }
         private void toolStripDropDownButton2_Click(object sender, EventArgs e) { }
+
+        private void ImportButton_Click(object sender, EventArgs e)
+        {
+            Import frm= new Import();
+            frm.Show();
+        }
+
+        private void RefreshDatabaseTables_Click(object sender, EventArgs e)
+        {
+            LoadTables();
+        }
     }
 }

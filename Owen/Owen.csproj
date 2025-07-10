@@ -16,7 +16,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\user\Desktop\Diplom8\</PublishUrl>
+    <PublishUrl>C:\Users\user\Desktop\OwenLiteFinal\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -63,9 +63,7 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
@@ -75,6 +73,10 @@
   <PropertyGroup>
     <StartupObject>
     </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Chessboard.Control, Version=1.0.2103.26, Culture=neutral, processorArchitecture=MSIL">
@@ -113,12 +115,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authorization.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Authorization.Designer.cs">
-      <DependentUpon>Authorization.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChessGameManager.cs" />
     <Compile Include="ChessReports.cs" />
     <Compile Include="Converter.cs">
@@ -135,33 +131,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Selection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Selection.Designer.cs">
-      <DependentUpon>Selection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Start.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Start.Designer.cs">
-      <DependentUpon>Start.cs</DependentUpon>
-    </Compile>
     <Compile Include="TableDataForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TableDataForm.Designer.cs">
       <DependentUpon>TableDataForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableViewLite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TableViewLite.Designer.cs">
-      <DependentUpon>TableViewLite.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Authorization.resx">
-      <DependentUpon>Authorization.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Converter.resx">
       <DependentUpon>Converter.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,17 +153,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Selection.resx">
-      <DependentUpon>Selection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Start.resx">
-      <DependentUpon>Start.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TableDataForm.resx">
       <DependentUpon>TableDataForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TableViewLite.resx">
-      <DependentUpon>TableViewLite.cs</DependentUpon>
     </EmbeddedResource>
     <Content Include="ChessBaseLite.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
